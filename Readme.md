@@ -34,8 +34,33 @@
 - The request is invalid: 400 bad request 
 - Any error: 500 internal server error
 
+# Installation 
+## Database Setup
+
+- Install a NoSql database **MongoDB** Compass or Shell in OS [Install Link](https://docs.mongodb.com/manual/installation/).
+- Open a mongodb compass and create a database called **audioserver**.
+- Create a Collection called **songs**.
+- In song collection design the above defined schema. 
+
+<img src='image results/database.png' width="490px" >
+
+## Running Flask API
+ - Make a clone on this repository 
+ - Install _Flask_ and _Flask SqlAlchemy_ python libraries in the code editor
+ - Run the program on your editor by using the command `python app.py` 
+ - It will be run on the localhost `http://127.0.0.1:5000/` 
+
 # Testing 
-## Tools - Postman Software
+## Tools - Postman Software [Installation link](https://www.postman.com/downloads/)
+
+## Give an API reuest in the postman application 
+- Add new song `http://127.0.0.1:5000/add` **Method=POST**
+- Display all songs `http://127.0.0.1:5000/songs` **Method=GET**
+- Find particular song by using song id `http://127.0.0.1:5000/song/609e04802ea519b84bcc2526` **Method=GET**
+- Update any song details `http://127.0.0.1:5000/update/609e04802ea519b84bcc2526` **Method=UPDATE**
+- Delete any song `http://127.0.0.1:5000/delete/609e04802ea519b84bcc2526`  **Method=DELETE**
+
+# Image Results 
 
 ## CREATE  
 <img src='image results/add song.png' width="490px" >
