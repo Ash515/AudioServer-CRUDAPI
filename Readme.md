@@ -39,3 +39,15 @@
 
 ## CREATE  
 <img src='image results/add song.png' width="490px" >
+
+## READ  
+<img src='image results/read song.png' width="490px" >
+
+## UPDATE  
+<img src='image results/update.png' width="490px" >
+
+## DELETE 
+<img src='image results/delete.png' width="490px" >
+
+## DISPLAY
+<img src='image results/display all.png' width="490px" >
