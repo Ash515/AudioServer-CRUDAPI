@@ -20,6 +20,7 @@ def not_found(error=None):
     resp.status_code = 404
     return resp
 
+#CRUD for Songs Collection
 #CREATE
 
 @app.route('/add',methods=['POST'])
@@ -80,6 +81,9 @@ def update_song(id):
         return resp
     else:
         return not_found()
+
+
+
 
 
 if __name__=='__main__':
