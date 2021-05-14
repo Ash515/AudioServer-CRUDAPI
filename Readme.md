@@ -35,7 +35,7 @@
 - Any error: 500 internal server error
 
 # Testing 
-## Tools - POSTMAN
+## Tools - Postman Software
 
-## CREATE 
-<img src='image results/add song.png' width="450px">
+## CREATE  
+<img src='image results/add song.png' width="490px">
