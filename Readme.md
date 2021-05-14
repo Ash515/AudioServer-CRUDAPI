@@ -44,10 +44,10 @@
 <img src='image results/read song.png' width="490px" >
 
 ## UPDATE  
-<img src='image results/update.png' width="490px" >
+<img src='image results/updatesong.png' width="490px" >
 
 ## DELETE 
-<img src='image results/delete.png' width="490px" >
+<img src='image results/deletesong.png' width="490px" >
 
 ## DISPLAY
 <img src='image results/display all.png' width="490px" >
