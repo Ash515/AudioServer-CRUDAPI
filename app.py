@@ -9,6 +9,19 @@ app.secret_key='key'
 app.config['MONGO_URI']="mongodb://localhost:27017/audioserver"
 mongo = PyMongo(app)
 
+
+@app.errorhandler(404)
+def not_found(error=None):
+    message={
+        'status':404,
+        'message':'Not Found'+request.url
+    }
+    resp=jsonify(message)
+    resp.status_code = 404
+    return resp
+
+#CREATE
+
 @app.route('/add',methods=['POST'])
 def add_song():
     _json=request.json
@@ -25,27 +38,22 @@ def add_song():
     else:
         return not_found()
 
-@app.errorhandler(404)
-def not_found(error=None):
-    message={
-        'status':404,
-        'message':'Not Found'+request.url
-    }
-    resp=jsonify(message)
-    resp.status_code = 404
-    return resp
+#DISPLAY
 
 @app.route('/songs')
 def Display_songs():
     songs = mongo.db.songs.find()
     resp=dumps(songs)
     return resp
+#READ
 
 @app.route('/song/<id>')
 def find_song(id):
     song=mongo.db.songs.find_one({'_id':ObjectId(id)})
     resp =dumps(song)
     return resp
+
+#DELETE
 
 @app.route('/delete/<id>',methods=['DELETE'])
 def delete_song(id):
@@ -54,6 +62,8 @@ def delete_song(id):
 
     resp.status_code=200
     return resp
+
+#UPDATE
 
 @app.route('/update/<id>',methods=['PUT'])
 def update_song(id):
