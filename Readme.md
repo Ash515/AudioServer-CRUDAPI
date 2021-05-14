@@ -76,3 +76,6 @@
 
 ## DISPLAY
 <img src='image results/display all.png' width="490px" >
+
+# Admin ❤
+[Ashwin Kumar Ramaswamy](https://github.com/Ash515)
